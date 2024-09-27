@@ -7,7 +7,7 @@ Este proyecto está compuesto por un backend hecho con NestJS y un frontend desa
 
 1. Clona el repositorio en tu máquina local:
     ```bash
-    git clone [https://github.com/usuario/proyecto-fullstack.git](https://github.com/FelipeForero21/corrales_oncredit.git)
+    git clone https://github.com/usuario/proyecto-fullstack.git](https://github.com/FelipeForero21/corrales_oncredit.git
     cd corrales_oncredit
     ```
 

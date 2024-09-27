@@ -1,0 +1,11 @@
+{
+    "name": "corral",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "concurrently \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+        "install": "npm install --prefix backend && npm install --prefix frontend"
+    },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}

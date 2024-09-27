@@ -1,0 +1,31 @@
+<div class="flex">
+    <aside class="w-64 bg-beige h-screen p-6">
+      <div class="flex flex-col items-center">
+        <img
+          src="https://www.shutterstock.com/image-vector/vector-illustration-cow-pig-goat-600nw-1377523625.jpg"
+          alt="Profile picture"
+          class="rounded-full w-20 h-20 mb-3"
+        />
+        <h2 class="text-xl font-semibold">La Granja de Forero</h2>
+        <p class="text-red-500">Admin</p>
+      </div>
+      <nav class="mt-10">
+        <ul>
+          <li class="mb-4">
+            <a
+              routerLink="/corrales"
+              class="flex items-center text-gray-700 hover:text-yellow-500"
+            >
+              <i class="fas fa-book w-6"></i>
+              <span class="ml-2">Corrales</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+  
+    <main class="flex-grow p-6">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  

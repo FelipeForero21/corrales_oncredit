@@ -7,13 +7,15 @@ import { AnimalesComponent } from './animales/animales.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';  
 import { FormsModule } from '@angular/forms';
-import { CorralesComponent } from './corrales/corrales.component'; 
+import { CorralesComponent } from './corrales/corrales.component';
+import { GraficaComponent } from './grafica/grafica.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     AnimalesComponent,
-    CorralesComponent
+    CorralesComponent,
+    GraficaComponent
   ],
   imports: [
     BrowserModule,

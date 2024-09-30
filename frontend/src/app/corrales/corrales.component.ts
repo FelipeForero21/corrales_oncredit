@@ -24,6 +24,7 @@ export class CorralesComponent implements OnInit {
   animalesDelCorral: any[] = [];
   animales: any[] = [];
   mensajeError: string | null = null;
+  darkMode = false; 
 
   constructor(private http: HttpClient, private dialog: MatDialog) {}
 
@@ -36,6 +37,15 @@ export class CorralesComponent implements OnInit {
     this.http.get<any[]>('http://localhost:3000/corrales').subscribe((data) => {
       this.corrales = data;
     });
+  }  toggleDarkMode() {
+    this.darkMode = !this.darkMode;
+    const htmlElement = document.documentElement; // Hace referencia al <html>
+    
+    if (this.darkMode) {
+      htmlElement.classList.add('dark');
+    } else {
+      htmlElement.classList.remove('dark');
+    }
   }
 
   obtenerAnimales(): void {

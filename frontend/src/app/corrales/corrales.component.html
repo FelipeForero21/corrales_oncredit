@@ -1,6 +1,7 @@
-<div class="flex-1 p-10">
-  <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-    <h1 class="text-2xl font-semibold mb-4 md:mb-0">Listado de Corrales</h1>
+<div class="flex-1 p-10 dark:bg-gray-900 dark:text-white">
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 dark:bg-gray-800">
+    <h1 class="text-2xl font-semibold mb-4 md:mb-0 dark:text-white">Listado de Corrales</h1>
     <div class="flex flex-col md:flex-row md:items-center">
       <button
         (click)="mostrarFormularioCorral = !mostrarFormularioCorral"
@@ -14,9 +15,16 @@
       >
         AGREGAR NUEVO ANIMAL
       </button>
+      <button
+        (click)="toggleDarkMode()"
+        class="bg-gray-800 text-white px-4 py-2 rounded-md md:ml-4 dark:bg-gray-600"
+      >
+        {{ darkMode ? 'Modo Claro' : 'Modo Oscuro' }}
+      </button>
     </div>
   </header>
 
+  <!-- Formulario para agregar nuevo corral -->
   <div *ngIf="mostrarFormularioCorral" class="mt-4">
     <h2 class="text-xl font-semibold mb-2">Nuevo Corral</h2>
     <form (ngSubmit)="agregarNuevoCorral()" #corralForm="ngForm">
@@ -50,6 +58,7 @@
     </form>
   </div>
 
+  <!-- Formulario para agregar nuevo animal -->
   <div *ngIf="mostrarFormularioAnimal" class="mt-4">
     <h2 class="text-xl font-semibold mb-2">Nuevo Animal</h2>
     <form (ngSubmit)="agregarAnimalYAsociarloACorral()" #animalForm="ngForm">
@@ -108,9 +117,10 @@
     </form>
   </div>
 
-  <table class="w-full bg-white shadow-md rounded-lg overflow-x-auto mt-6">
+  <!-- Tabla de corrales -->
+  <table class="w-full bg-white shadow-md rounded-lg overflow-x-auto mt-6 dark:bg-gray-700 dark:text-white">
     <thead>
-      <tr class="bg-gray-50 text-gray-700 font-semibold text-sm uppercase text-center">
+      <tr class="bg-gray-50 text-gray-700 font-semibold text-sm uppercase text-center dark:bg-gray-800 dark:text-white">
         <th class="py-3 px-6">Id</th>
         <th class="py-3 px-6">Nombre del Corral</th>
         <th class="py-3 px-6">Cantidad de Animales</th>
@@ -120,7 +130,7 @@
         <th class="py-3 px-6">Borrar Corral</th>
       </tr>
     </thead>
-    <tbody class="text-center">
+    <tbody class="text-center dark:bg-gray-700">
       <tr *ngFor="let corral of corrales" class="border-b">
         <td class="py-4 px-6">{{ corral.id }}</td>
         <td class="py-4 px-6">{{ corral.nombre }}</td>
